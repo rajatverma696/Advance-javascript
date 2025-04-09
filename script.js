@@ -104,11 +104,49 @@
 
     //RETURNING WITH ARROW FUNCTIONS:
 
-    let addTwoNumbers = (x,y) => x+y;
-    let resultArr = [];
-    for(let i =0; i<10; i++){
-       let result = addTwoNumbers(i, i*2);
-       resultArr.push(result);
-    }
-    console.log(resultArr);
+   //  let addTwoNumbers = (x,y) => x+y;
+   //  let resultArr = [];
+   //  for(let i =0; i<10; i++){
+   //     let result = addTwoNumbers(i, i*2);
+   //     resultArr.push(result);
+   //  }
+   //  console.log(resultArr);
+
+   // VARIABLE SCOPE IN FUNCTION-
+      // function testavailablity(x){
+      //    console.log("available here\n",x);
+      // }
+      // testavailablity("hi");
+      // console.log("Not available here: ",x);
+
+      // function doingStuff(){
+      //    if(true){
+      //       var x = "local";
+      //    }
+      //    console.log(x);
+      // }
+      // doingStuff();
+
+      // let x = "global";
+      // function doingStuff(){
+      //    let x ="local";
+      //    console.log(x);
+      // }
+      // doingStuff();
+      // console.log(x);
+
+      // (function(x,y){
+      //    console.log(x+y)
+      // })(2,3);
+      // (5,6);
+
+      function getRec(nr){
+         console.log("Started function",nr);
+         if(nr>0){
+            logRecursive("donne with recurssion");
+         }
+         console.log("Ebded function: ",nr);
+      }
+      logRecursive(3);
+
 
